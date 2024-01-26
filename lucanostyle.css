@@ -113,7 +113,6 @@ body {
     height: 400px;
     width: 70vw;
     overflow: hidden;
-
     margin-right: 500px;
 }
 
@@ -149,8 +148,24 @@ body {
 }
 
 .djImage img {
+    position: relative;
     width: 750px;
     height: auto;
+}
+
+.djLight {
+    /* z-index: -1; */
+    position: absolute;
+    bottom:calc(-20vh - 760px);
+    left:70%;
+    width: 200px;
+    height: 850px;
+    background: linear-gradient(0deg, #b444b8, #c263c511);
+    /* background-color: white; */
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    opacity: 0.5;
+    /* backdrop-filter: blur(80px); */
+    filter: blur(20px);
 }
 
 .myName {
@@ -449,4 +464,9 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+
+@keyframes lightMove {
+    
 }
