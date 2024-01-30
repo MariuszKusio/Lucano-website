@@ -444,7 +444,7 @@ body {
   display: block;
   width: 150px;
   height: 40px;
-  margin: 25px auto 200px auto;
+  margin: 25px auto 0px auto;
   border-radius: 15px;
   font-family:'roboto', sans-serif;
   cursor: pointer;
@@ -456,6 +456,18 @@ body {
   border: 2px solid rgba(2, 2, 2, .2);
   text-shadow: 0px 0px 0px 2px black;
   transition: .2s;
+}
+
+.contact .formValidationLabel {
+  display: block;
+  color: white;
+  font-size: 12px;
+  width: 200px;
+  height: 12px;
+  margin: 8px auto;
+  margin-bottom: 160px;
+  cursor: default;
+  text-transform: none;
 }
 
 .sendMessage:hover {

@@ -1,18 +1,25 @@
 // Components from html
 
 const emailButton = document.querySelector('.sendMessage');
+let emailButtonFlag = true;   // flag for make button disable after sending message (anti-spam)
+let formUserName = document.querySelector('.userNameInput');
+let formSubject = document.querySelector('.subjectInput');
+let formReplyTo = document.querySelector('.userEmailInput');
+let formMessage = document.querySelector('.textMessage');
+const validationLabel = document.querySelector('.formValidationLabel');
 
 
-// var paramss = {
-//     senderName: document.querySelector('.userNameInput').value,
-//     subject: document.querySelector('.subjectInput').value,
-//     replyTo: document.querySelector('.userEmailInput').value,
-//     message: document.querySelector('.textMessage').value,
 
-//  };
+
 
 
 // Messages
+
+let butonStatus = false;
+emailButton.disabled = butonStatus;
+
+
+
 
 const sendEmail = () => {
     (function(){
@@ -21,36 +28,38 @@ const sendEmail = () => {
     
     const myEmail = 'mariuszkusio33@gmail.com'; // email to get messages from the contact form
 
+    // parameters for emailJS 
     let params = {
-       senderName: document.querySelector('.userNameInput').value,
-       subject: document.querySelector('.subjectInput').value,
+       senderName: formUserName.value,
+       subject: formSubject.value,
        to: myEmail,
-       replyTo: document.querySelector('.userEmailInput').value,
-       message: document.querySelector('.textMessage').value,
+       replyTo: formReplyTo.value,
+       message: formMessage.value,
 
     };      
 
-    
     // safeguard for email messages
+    if(emailButtonFlag === true){
+
     if ([...params.senderName].length < 1) {
-        alert('Podaj imię.');
+        validationLabel.textContent = 'Podaj imię';
     } else if ([...params.senderName].length > 15) {
-        alert('Za długa nazwa');
-    }
-     else if ([...params.subject].length < 1) {
-        alert('Podaj temat.');
-    } else if ([...params.subject].length > 80) {
-        alert('Za długi temat');
+        validationLabel.textContent = 'Za długa nazwa';
     }
     else if ([...params.replyTo].length < 1) {
-        alert('Podaj email.');
+        validationLabel.textContent = 'Podaj email';
     } else if ([...params.replyTo].length > 60) {
-        alert('Za długi email.');
+        validationLabel.textContent = 'Za długi email';
+    }
+    else if ([...params.subject].length < 1) {
+        validationLabel.textContent = 'Podaj temat';
+    } else if ([...params.subject].length > 80) {
+        validationLabel.textContent = 'Za długi temat';
     } 
      else if ([...params.message].length < 1) {
-        alert('Napisz wiadomość.');
+        validationLabel.textContent = 'Napisz wiadomość';
     } else if ([...params.subject].length > 2000) {
-        alert('Za długa wiadomość.');
+        validationLabel.textContent = 'Za długa wiadomość(max 2000 znaków)';
     }
     else {
         let serviceID = "service_f0figcn";
@@ -58,19 +67,36 @@ const sendEmail = () => {
     
         emailjs.send("service_f0figcn","template_jghr7s1", params)
         .then( res => {
-          alert('Email został wysłany poprawnie!');
+          validationLabel.textContent = 'Wiadomość została wysłana!';
+          // clear form
+          formMessage.value = '';
+          formReplyTo.value = '';
+          formUserName.value = '';
+          formSubject.value = '';
+          
+          emailButtonFlag = false;  
         })
         .catch();
     }
-     
-    // var serviceID = "service_f0figcn";
-    // var templateID = "template_jghr7s1";
 
-    // emailjs.send("service_f0figcn","template_jghr7s1", params)
-    // .then( res => {
-    //   alert('Email został wysłany poprawnie!');
-    // })
-    // .catch();
+} else if(emailButtonFlag === false) {
+    validationLabel.textContent = 'Przeładuj stronę żeby wysłać nową wiadomość.';
+    let butonStatus = true;
+    emailButton.disabled = butonStatus;
+
+}
+     
 }
 
+
 emailButton.addEventListener('click', sendEmail);
+
+
+
+
+// Test function
+
+const showMe = () => {
+    console.log(butonStatus);
+   }
+   // setInterval(showMe,1000);
