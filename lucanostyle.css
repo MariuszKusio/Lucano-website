@@ -407,7 +407,7 @@ body {
     text-transform: uppercase;
 }
 
-.userEmailInput {
+.smallInput {
     display: block;
     padding:0 12px;
     width: 25vw;
@@ -421,9 +421,14 @@ body {
     cursor: pointer;
 }
 
+.userNameInput {
+    width: 15vw;
+}
+
 .textMessage {
     padding:12px 12px;
     display: block;
+    resize: none;
     width: 60vw;
     height: 250px;
     margin: 15px auto;
@@ -486,6 +491,7 @@ body {
     background: -webkit-linear-gradient(#ad7f23, #ca9c38);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
 }
 
 
