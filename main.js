@@ -15,12 +15,18 @@ const validationLabel = document.querySelector('.formValidationLabel');
 
 // Messages
 
-let butonStatus = false;
-emailButton.disabled = butonStatus;
+// this function make message button disabled for 20 seconds and put text in validation label when cooldown will ended
+const disabledButton = () => {
+   emailButton.disabled = true;
+   
+   setTimeout(() => {
+    validationLabel.textContent = 'Możesz wysłać wiadomość.';
+    emailButton.disabled = false;
+    emailButtonFlag = true; 
+   }, 20000);
+}
 
-
-
-
+// main function to send message with secure of spam
 const sendEmail = () => {
     (function(){
       emailjs.init("jQrZDq8T5rFR7ZI3A");
@@ -80,12 +86,10 @@ const sendEmail = () => {
     }
 
 } else if(emailButtonFlag === false) {
-    validationLabel.textContent = 'Przeładuj stronę żeby wysłać nową wiadomość.';
-    let butonStatus = true;
-    emailButton.disabled = butonStatus;
+    validationLabel.textContent = 'Poczekaj 20 sekund.';
 
+    disabledButton(); 
 }
-     
 }
 
 

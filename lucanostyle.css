@@ -72,6 +72,9 @@ body {
   height: 100vh;
   width: 100%;
   background-image: url(img/background1.png);
+  margin: 0 auto;
+  min-width: 1200px;
+  max-width: 1920px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -96,6 +99,8 @@ body {
     margin-left: calc(30vw + 50px);
     height: 400px;
     width: 80vw;
+    min-width: 1200px;
+    max-width: 1600px;
     border-radius: 50px;
     padding: 3px; 
     background-size: 400% 400%;
@@ -110,6 +115,8 @@ body {
     align-items: center;
     height: 400px;
     width: 70vw;
+    min-width: 1200px;
+    max-width: 1600px;
     overflow: hidden;
     margin-right: 500px;
 }
@@ -467,6 +474,7 @@ body {
   margin: 8px auto;
   margin-bottom: 160px;
   cursor: default;
+  letter-spacing: 1px;
   text-transform: none;
 }
 
