@@ -17,7 +17,7 @@ html::-webkit-scrollbar {
 body {
     background-color: rgb(5,10,20);
     color: white;
-    height: 350vh;
+    
 }
 
 
@@ -26,6 +26,10 @@ body {
 .menuBar {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .menuBar .logo {
@@ -68,8 +72,8 @@ body {
 
 
 .startScreen {
-  overflow-x: clip;
-  height: 100vh;
+  /* overflow: clip; */
+  height: 100dvh;
   width: 100%;
   background-image: url(img/background1.png);
   margin: 0 auto;
@@ -94,13 +98,15 @@ body {
 
 
 .attributeBorder {
+    position: absolute;
+    top: calc(100% - 350px);
+    left: 50%;
+    transform: translateX(-50%);
     background: linear-gradient(-45deg, #BF953F, #d4a848, #B38728, #BF953F);
-    margin-top: calc(100vh - 110px - 350px);
-    margin-left: calc(30vw + 50px);
     height: 400px;
-    width: 80vw;
-    min-width: 1200px;
-    max-width: 1600px;
+    width: 80%;
+    min-width: 1000px;
+    max-width: 1200px;
     border-radius: 50px;
     padding: 3px; 
     background-size: 400% 400%;
@@ -114,23 +120,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 400px;
-    width: 70vw;
-    min-width: 1200px;
-    max-width: 1600px;
+    min-width: 1000px;
+    max-width: 1200px;
     overflow: hidden;
-    margin-right: 500px;
 }
 
 
 .djAttributes {
     border-radius: 48px;
     background-color: rgb(5,10,20);
-
 }
 
 .djAttributes img {
    width: 220px;
- 
 }
 
 
@@ -141,6 +143,264 @@ body {
     font-size: 20px;
     text-align: center;
     cursor: default;
+}
+
+
+/* Home page media queries */
+
+@media (max-width: 1400px) {
+
+    .attributeBorder {
+        top: calc(100% - 300px);
+        height: 350px;
+        min-width: 800px;
+        max-width: 1000px;
+    }
+
+    .attributesWrapper {
+        height: 350px;
+        min-width: 800px;
+        max-width: 1000px;
+    }
+
+    .djAttributes img {
+        width: 180px;
+     }
+
+
+   
+}
+
+@media (max-width: 1200px) { 
+    .startScreen {
+        min-width: 800px;
+        max-width: 1200px;
+      }   
+
+      .menuBar {
+        min-width: 800px;
+        max-width: 1200px; 
+    }   
+
+    .menuBar img {
+        height: 60px;
+    }
+
+    .menuBar .logo {
+        height: 60px;
+        margin-left: 30px;
+    }
+
+    .menuBar .menuItems {
+        height: 90px;
+        gap: 35px;
+        font-size: 30px;
+        margin-right: 60px;
+     }
+
+     .menuItems li {
+        line-height: 60px;
+    }
+
+    .attributeBorder {
+        top: calc(100% - 260px);
+        height: 300px;
+        min-width: 500px;
+        max-width: 800px;
+    }
+
+    .attributesWrapper {
+        gap: 25px;
+        height: 300px;
+        min-width: 500px;
+        max-width: 800px;
+    }
+
+    .djAttributes img {
+        width: 160px;
+     }
+
+    .djAttributes p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+  
+    .menuBar img {
+        height: 50px;
+    }
+
+    .menuBar .logo {
+        height: 50px;
+        margin-left: 25px;
+    }
+
+    .menuBar .menuItems {
+        height: 80px;
+        font-size: 28px;
+        margin-right: 50px;
+     }
+
+     .menuItems li {
+        line-height: 50px;
+    }
+
+    .attributeBorder {
+        top: calc(100% - 230px);
+        height: 260px;
+        min-width: 500px;
+        max-width: 700px;
+    }
+
+    .attributesWrapper {
+        gap: 20px;
+        height: 260px;
+        min-width: 500px;
+        max-width: 700px;
+    }
+
+    .djAttributes img {
+        width: 140px;
+     }
+
+    .djAttributes p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .startScreen {
+        min-width: 700px;
+        max-width: 850px;
+      }   
+
+      .menuBar {
+        min-width: 700px;
+        max-width: 850px; 
+    }   
+
+    .menuBar img {
+        height: 50px;
+    }
+
+    .menuBar .logo {
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    .menuBar .menuItems {
+        height: 70px;
+        gap: 25px;
+        font-size: 26px;
+        margin-right: 40px;
+     }
+
+     .menuItems li {
+        line-height: 50px;
+    }
+
+    .menuLine {
+        height: 2px;
+    }
+
+
+    .attributeBorder {
+        top: calc(100% - 195px);
+        height: 230px;
+    }
+
+    .attributesWrapper {
+        gap: 15px;
+        height: 230px;
+    }
+
+    .djAttributes img {
+        width: 110px;
+     }
+
+    .djAttributes p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .startScreen {
+        overflow: hidden;
+        width: 100%;
+        min-width: 300px;
+      }   
+
+      .menuBar {
+        width: 100%;
+        min-width: 300px; 
+    }
+ 
+       
+
+
+
+    .menuBar .logo {
+        height: 70px;
+        margin: 20px auto;
+    }
+
+    .menuBar img {
+        height: 60px;
+    }
+
+    .menuBar .menuItems {
+       display: none;
+    }
+
+    /* Attributes */
+
+.attributeBorder {
+    top: calc(5% + 70px);
+    left: 100%;
+    transform: translateX(calc(-100% + 35px + 2px));
+
+    height: 570px;
+    width: 20%;
+    /* min-width: 150px;
+    max-width: 170px; */
+
+    min-width: 170px;
+    max-width: 190px;
+
+    border-radius: 30px;
+    padding: 2px; 
+}
+    .attributesWrapper {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        height: 570px;
+        /* min-width: 150px;
+        max-width: 170px; */
+
+        min-width: 130px;
+        max-width: 150px;
+        margin-right: 35px;
+    }
+
+    .djAttributes {
+        border-radius: 28px;
+    }
+
+ 
+
+    .djAttributes img {
+        width: 87px;
+     }
+
+    .djAttributes p {
+        font-size: 10px;
+    }
+
 }
 
 
