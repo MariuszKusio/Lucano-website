@@ -42,21 +42,20 @@ body {
 
 .menuBar .menuItems {
    display: flex;
-   gap: 45px;
    height: 100px;
-   font-size: 3.4rem;
    margin-right: 60px;
+   gap: 45px;
+   font-size: 3.4rem;
    text-transform: uppercase;
    font-family: 'Julius Sans One', sans-serif;
 
 }
 
 .menuItems li {
-    
+    line-height: 70px;
+    margin-top: 30px;
     cursor: pointer;
     list-style: none;
-    margin-top: 30px;
-    line-height: 70px;
 }
 
 
@@ -75,24 +74,24 @@ body {
 
 
 .startScreen {
-  /* overflow: clip; */
   height: 100dvh;
   width: 100%;
-  background-image: url(img/background1.png);
-  margin: 0 auto;
   min-width: 1200px;
   max-width: 1920px;
+  margin: 0 auto;
+  background-image: url(img/background1.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .startScreen video {
+    width: 100%;
+    height: 100vh;
+
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100%;
-    height: 100vh;
 }
 
 
@@ -101,30 +100,31 @@ body {
 
 
 .attributeBorder {
+    width: 80%;
+    min-width: 1000px;
+    max-width: 1200px;
+    height: 400px;
+    padding: 3px; 
+
     position: absolute;
     top: calc(100% - 350px);
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(-45deg, #BF953F, #d4a848, #B38728, #BF953F);
-    height: 400px;
-    width: 80%;
-    min-width: 1000px;
-    max-width: 1200px;
     border-radius: 50px;
-    padding: 3px; 
     background-size: 400% 400%;
     animation: gradientMove 4s ease infinite;
 }
 
 
 .attributesWrapper {
+    height: 400px;
+    min-width: 1000px;
+    max-width: 1200px;
     display: flex;
     gap: 35px;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    min-width: 1000px;
-    max-width: 1200px;
     overflow: hidden;
 }
 
@@ -154,10 +154,10 @@ body {
 @media (max-width: 1400px) {
 
     .attributeBorder {
-        top: calc(100% - 300px);
         height: 350px;
         min-width: 800px;
         max-width: 1000px;
+        top: calc(100% - 300px);
     }
 
     .attributesWrapper {
@@ -196,9 +196,9 @@ body {
 
     .menuBar .menuItems {
         height: 90px;
+        margin-right: 60px;
         gap: 35px;
         font-size: 3rem;
-        margin-right: 60px;
      }
 
      .menuItems li {
@@ -206,17 +206,17 @@ body {
     }
 
     .attributeBorder {
-        top: calc(100% - 260px);
         height: 300px;
         min-width: 500px;
         max-width: 800px;
+        top: calc(100% - 260px);
     }
 
     .attributesWrapper {
-        gap: 25px;
         height: 300px;
         min-width: 500px;
         max-width: 800px;
+        gap: 25px;
     }
 
     .djAttributes img {
@@ -241,8 +241,8 @@ body {
 
     .menuBar .menuItems {
         height: 80px;
-        font-size: 2.8rem;
         margin-right: 50px;
+        font-size: 2.8rem;
      }
 
      .menuItems li {
@@ -250,17 +250,17 @@ body {
     }
 
     .attributeBorder {
-        top: calc(100% - 230px);
         height: 260px;
         min-width: 500px;
         max-width: 700px;
+        top: calc(100% - 230px);
     }
 
     .attributesWrapper {
-        gap: 20px;
         height: 260px;
         min-width: 500px;
         max-width: 700px;
+        gap: 20px;
     }
 
     .djAttributes img {
@@ -295,9 +295,9 @@ body {
 
     .menuBar .menuItems {
         height: 70px;
+        margin-right: 40px;
         gap: 25px;
         font-size: 2.6rem;
-        margin-right: 40px;
      }
 
      .menuItems li {
@@ -310,13 +310,13 @@ body {
 
 
     .attributeBorder {
-        top: calc(100% - 195px);
         height: 230px;
+        top: calc(100% - 195px);
     }
 
     .attributesWrapper {
-        gap: 15px;
         height: 230px;
+        gap: 15px;
     }
 
     .djAttributes img {
@@ -356,26 +356,26 @@ body {
     /* Attributes */
 
 .attributeBorder {
-    top: calc(5% + 70px);
-    left: 100%;
-    transform: translateX(calc(-100% + 35px + 2px));
-
     height: 570px;
     width: 20%;
     min-width: 170px;
     max-width: 190px;
-    border-radius: 30px;
     padding: 2px; 
+
+    top: calc(5% + 70px);
+    left: 100%;
+    transform: translateX(calc(-100% + 35px + 2px));
+    border-radius: 30px;
 }
     .attributesWrapper {
-        flex-direction: column;
-        gap: 15px;
-        justify-content: center;
-        align-items: center;
         height: 570px;
         min-width: 130px;
         max-width: 150px;
         margin-right: 35px;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
     }
 
     .djAttributes {
@@ -493,19 +493,19 @@ body {
 .descriptionBorder {
     width: 100%;
     height: 750px;
+    padding: 3px; 
     background: linear-gradient(-45deg, #BF953F, #d4a848, #B38728, #BF953F);
     border-radius: 50px;
-    padding: 3px; 
     background-size: 400% 400%;
     animation: gradientMove 4s ease infinite;
 }
 
 .about .descriptionInside {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
+    align-items: center;
+    justify-content: center;
     border-radius: 48px;
     background-color: rgb(4,9,17);
     overflow: hidden;
@@ -529,11 +529,11 @@ body {
 
 .djDescription p {
     box-sizing: border-box;
+    padding: 2.5em;
     text-align: center;
     font-size: 2.6rem;
     font-family: 'roboto', sans-serif;
     font-weight: 200;
-    padding: 2.5em;
 }
 
 
@@ -549,10 +549,9 @@ body {
     }
     
     .djDescription p {
-        font-size: 2.2rem;
         padding: 2.3em;
+        font-size: 2.2rem;
     }
-    
 }
 
 @media (max-width: 1200px) {
@@ -567,8 +566,8 @@ body {
     }
     
     .djDescription p {
-        font-size: 2rem;
         padding: 2.1em;
+        font-size: 2rem;
     }
 }
 
@@ -585,8 +584,8 @@ body {
     }
     
     .djDescription p {
-        font-size: 1.8rem;
         padding: 1.8em;
+        font-size: 1.8rem;
     }
 }
 
@@ -601,8 +600,8 @@ body {
     }
     
     .djDescription p {
-        font-size: 1.6rem;
         padding: 1.4em;
+        font-size: 1.6rem;
     }
 }
 
@@ -614,47 +613,35 @@ body {
 
     .djImageMobile {
         display: block;
-        margin: 8rem auto 0 auto;
         width: 55%;
+        margin: 8rem auto 0 auto;
     }
 
     .descriptionWrapper {
-        height: 250px;
+        height: auto;
         margin-top: 0px;
     }
 
     .descriptionBorder {
-        height: 250px;
-        border-radius: 36px;
+        height: auto;
         padding: 2px; 
+        border-radius: 36px;
     }
     .about .descriptionInside {
         border-radius: 34px;
     }
     
     .djDescription p {
+        padding: 2.3em;
         font-size: 1.5rem;
-        padding: 1.3em;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .descriptionWrapper {
-        height: 300px;
-        
-    }
-
-    .descriptionBorder {
-        height: 300px;
     }
 }
 
 @media (max-width: 600px) {
 
     .djDescription p {
+        padding: 2em;
         font-size: 1.4rem;
-        padding: 1.4em
     }
     .djImageMobile {
         width: 60%;
@@ -664,8 +651,7 @@ body {
 @media (max-width: 450px) {
 
     .descriptionWrapper {
-        height: 330px;
-        
+        height: auto;
     }
 
     .descriptionWrapper {
@@ -673,7 +659,7 @@ body {
     }
 
     .descriptionBorder {
-        height: 330px;
+        height: auto;
     }
 }
 
@@ -685,7 +671,7 @@ body {
 
     .djDescription p {
         font-size: 1.3rem;
-        padding: 1.5em
+        padding: 1.9em
     }
 }
 
@@ -694,8 +680,8 @@ body {
 /* GALLERY */
 
 .gallery h1 {
-    margin: 65px 0;
     width: 100%;
+    margin: 6.5rem 0;
     text-align: center;
     font-size: 5rem;
     text-transform: uppercase;
@@ -709,13 +695,11 @@ body {
 }
 
 .filterPick ul {
-
     display: flex;
     margin-left: 10px;
     margin-bottom: 10px;
     gap: 20px;
     font-size: 1.5rem;
-    
 }
 
 .filterPick li {
@@ -735,8 +719,8 @@ body {
 }
 
 .galleryWraper {
-    margin: 0 auto;
     max-width: 1280px;
+    margin: 0 auto;
 }
 
 .mainGallery {
@@ -815,7 +799,7 @@ body {
 @media (max-width: 1400px) {
 
     .gallery h1 {
-        margin: 45px 0;
+        margin: 4.5rem 0;
         font-size: 4.2rem;
     }
 }
@@ -823,23 +807,37 @@ body {
 @media (max-width: 1200px) {
 
     .gallery h1 {
-        margin: 50px 0;
+        margin: 5rem 0;
         font-size: 4rem;
     }
 }
 
-@media (max-width: 1000px) {
-
-}
-
-@media (max-width: 850px) {
-
-}
 
 @media (max-width: 700px) {
     .gallery h1 {
-        margin: 40px 0;
+        margin: 4rem 0;
         font-size: 3.5rem;
+    }
+
+    .filterPick ul {
+        margin-bottom: 7px;
+        gap: 1.3rem;
+        font-size: 1.3rem;  
+    }
+
+    .filterPick li {
+        line-height: 20px;
+    }
+
+    .filterPick ul li img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery h1 {
+        margin: 5rem 0 4rem 0;
+        font-size: 3.3rem;
     }
 }
 
@@ -850,8 +848,8 @@ body {
 
 
 .contact h1 {
-    margin: 65px 0;
     width: 100%;
+    margin: 6.5rem 0;
     text-align: center;
     font-family: 'roboto', sans-serif;
     font-weight: 300;
@@ -862,14 +860,13 @@ body {
 .contact p {
     display: block;
     width: 100%;
+    margin: 2rem 0;
     text-align: center;
     font-family: 'roboto', sans-serif;
     font-weight: 300;
     font-size: 1.6rem;
     text-transform: uppercase;
-    margin: 20px 0;
     cursor: pointer;
-
 }
 
 .contact i {
@@ -881,8 +878,8 @@ body {
 }
 
 .contact h2 {
-    margin: 40px 0;
     width: 100%;
+    margin: 4rem 0;
     text-align: center;
     font-family: 'roboto', sans-serif;
     font-weight: 300;
@@ -892,15 +889,17 @@ body {
 
 .smallInput {
     display: block;
-    padding:0 12px;
     width: 25vw;
     height: 40px;
     margin: 15px auto;
-    border-radius: 15px;
-    outline: none;
+    padding:0 12px;
+    border: 0 solid white;
+    border-radius: 10px;
+    box-shadow: inset 10px 10px 15px -13px rgba(66, 68, 90, .6);
     font-family: 'roboto', sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
+    outline: none;
     cursor: pointer;
 }
 
@@ -909,17 +908,19 @@ body {
 }
 
 .textMessage {
-    padding:12px 12px;
     display: block;
-    resize: none;
     width: 60vw;
     height: 250px;
     margin: 15px auto;
-    border-radius: 20px;
-    outline: none;
+    padding:12px 12px;
+    border: 0 solid white;
+    border-radius: 10px;
+    box-shadow: inset 10px 10px 15px -13px rgba(66, 68, 90, .6);
     font-family: 'roboto', sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
+    resize: none;
+    outline: none;
     cursor: pointer;
 }
 
@@ -929,29 +930,28 @@ body {
   height: 40px;
   margin: 25px auto 0px auto;
   border-radius: 15px;
-  font-family:'roboto', sans-serif;
-  cursor: pointer;
-  text-transform: uppercase;
+  border: 2px solid rgba(2, 2, 2, .2);
   font-size: 1.8rem;
+  font-family:'roboto', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 0px 2px black;
   color: black;
   background: linear-gradient(-45deg, #ad7f23, #b68b2f, #ca9c38, #aa8233);
   background-size: 300% 300%;
-  border: 2px solid rgba(2, 2, 2, .2);
-  text-shadow: 0px 0px 0px 2px black;
+  cursor: pointer;
   transition: .2s;
 }
 
 .contact .formValidationLabel {
   display: block;
-  color: white;
-  font-size: 1.2rem;
   width: 200px;
   height: 12px;
-  margin: 8px auto;
-  margin-bottom: 160px;
-  cursor: default;
+  margin: 1.2rem auto 14rem auto;
+  color: white;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: none;
+  cursor: default;
 }
 
 .sendMessage:hover {
@@ -961,23 +961,111 @@ body {
 /* Responsive Contact */
 
 @media (max-width: 1400px) {
-
+    .contact h1 {
+        margin: 4.5rem 0;
+        font-size: 4.2rem;
+    }
 }
 
 @media (max-width: 1200px) {
+    .contact h1 {
+        margin: 5rem 0;
+        font-size: 4rem;
+    }
+
+    .contact h2 {
+        margin: 3.6rem 0;
+        font-size: 2.8rem;
+    }
+
+    .smallInput {
+        width: 35vw;
+    }
+
+    .userNameInput {
+        width: 20vw;
+    }
 
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 950px) {
+  
+    .smallInput {
+        width: 40vw;
+    }
+
+    .userNameInput {
+        width: 25vw;
+    }
+
+  
+    .textMessage {
+        width: 80vw;
+        height: 250px;
+    }
 
 }
 
-@media (max-width: 850px) {
-
-}
 
 @media (max-width: 700px) {
+
+    .contact h1 {
+        margin: 4rem 0;
+        font-size: 3.5rem;
+    }
     
+    .contact i {
+        margin-right: 8px;
+        font-size: 1.8rem;
+    }
+
+    .smallInput {
+        width: 60vw;
+    }
+
+    .userNameInput {
+        width: 35vw;
+    }
+
+    .contact h2 {
+        margin: 3.2rem 0;
+        font-size: 2.5rem;
+    }
+ 
+}
+
+@media (max-width: 400px) {
+    .contact h1 {
+        margin: 4rem 0;
+        font-size: 3.5rem;
+    }
+    
+    .contact i {
+        margin-right: 8px;
+        font-size: 1.8rem;
+    }
+
+    .smallInput {
+        width: 70vw;
+        height: 32px;
+        font-size: 1.3rem;
+    }
+
+    .userNameInput {
+        width: 40vw;
+    }
+
+    .textMessage {
+        width: 85vw;
+        height: 200px;
+        font-size: 1.3rem;
+    }
+
+    .contact h2 {
+        margin: 3rem 0;
+        font-size: 2.4rem;
+    }
+  
 }
 
 
@@ -998,9 +1086,9 @@ body {
 }
 
 .mkFooter p {
+    display: inline-block;
     font-family: roboto;
     font-weight: 300;
-    display: inline-block;
     text-decoration: none;
     font-size: 2.2rem;
     color: white;
