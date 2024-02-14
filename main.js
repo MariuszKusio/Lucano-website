@@ -1,5 +1,7 @@
 // Components from html
 
+
+// Message Component
 const emailButton = document.querySelector('.sendMessage');
 let emailButtonFlag = true;   // flag for make button disable after sending message (anti-spam)
 let formUserName = document.querySelector('.userNameInput');
@@ -7,6 +9,15 @@ let formSubject = document.querySelector('.subjectInput');
 let formReplyTo = document.querySelector('.userEmailInput');
 let formMessage = document.querySelector('.textMessage');
 const validationLabel = document.querySelector('.formValidationLabel');
+
+// Gallery Component
+const selectAllButton = document.querySelector('.selectAll');
+const selectPhotosButton = document.querySelector('.selectPhotos');
+const selectVideosButton = document.querySelector('.selectVideos');
+// na razie nie wiem czy to potrzebne, ale wybierzemy sobie wszystkie przyciski z daną klasą
+
+const selectButtons = document.querySelectorAll('.filterPick li:nth-child(n+2)');
+const videoItems = document.querySelectorAll('.mainGallery video')
 
 
 
@@ -97,10 +108,49 @@ emailButton.addEventListener('click', sendEmail);
 
 
 
+// Gallery
 
-// Test function
 
-const showMe = () => {
-    console.log(butonStatus);
-   }
-   // setInterval(showMe,1000);
+// Gallery Component
+const showAllButton = document.getElementById('showAll');
+const showPhotosButton = document.getElementById('showPhotos');
+const showVideosButton = document.getElementById('showVideos');
+
+const gallery = document.getElementById('gallery');
+const pickButtons = document.getElementById('pickButtons');
+
+
+
+
+showAllButton.addEventListener('click', function() {showItems('all')});
+showPhotosButton.addEventListener('click', function() {showItems('photoItem')});
+showVideosButton.addEventListener('click', function() {showItems('videoItem')});
+
+
+// Filter photos and video
+function showItems(type) {
+    // underline button change when we pick some filter option.
+    const buttons = Array.from(pickButtons.children);
+    buttons.forEach(button => {
+        button.classList.remove('filterSelected');
+
+        if(showAllButton.dataset.btntype == type) {
+            showAllButton.classList.add('filterSelected')
+        } else if(showPhotosButton.dataset.btntype == type) {
+            showPhotosButton.classList.add('filterSelected')
+        } else if(showVideosButton.dataset.btntype == type) {
+            showVideosButton.classList.add('filterSelected')
+        }
+    })
+    
+
+    // Filter make by Array with gallery items. 
+    const items = Array.from(gallery.children);
+    items.forEach(item => {
+        const isVisible = type === 'all' || item.classList.contains(type);
+        item.style.display = isVisible ? 'block' : 'none';
+    })
+
+    
+}
+

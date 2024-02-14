@@ -43,7 +43,7 @@
         </ul>
     </nav>
 
-
+   <div class="mobileAttributeWrapper">
     <div class="attributeBorder">
         <div class="djAttributes">
             <div class="attributesWrapper">
@@ -54,7 +54,7 @@
         </div>
         </div>
     </div>
-       
+  </div> 
 
     </section>
 
@@ -134,45 +134,46 @@
         <h1>galeria</h1>
         <div class="filterWrapper">
         <div class="filterPick">
-            <ul>
+            <ul id="pickButtons">
                 <li><img src="img/filterIcon.svg" alt=""></li>
-                <li>Wszystko</li>
-                <li>Zdjęcia</li>
-                <li>Filmy</li>
+                <li id="showAll"  class="selectButton filterSelected" data-btnType="all">Wszystko</li>
+                <li id="showPhotos" class="selectButton" data-btnType="photoItem">Zdjęcia</li>
+                <li id="showVideos" class="selectButton" data-btnType="videoItem">Filmy</li>
             </ul>
         </div>
     </div>
 
     <div class="galleryWraper">
-    <div class="mainGallery">
-        <video src="img/video (1080p).mp4" class="galleryItem1"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem2"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem3"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem4"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem5"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem6"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem7"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem8"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem9"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem10"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem11"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem12"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem13"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem14"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem15"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem16"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem17"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem18"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem19"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem20"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem21"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem22"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem23"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem24"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem25"></video>
-        <video src="img/video (1080p).mp4" class="galleryItem26"></video>
+    <div id="gallery" class="mainGallery">
+
+        <video src="img/video (1080p).mp4" autoplay muted loop class="videoItem"></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        <video src="img/video (1080p).mp4" class="photoItem" ></video>
+        <video src="img/video (1080p).mp4" class="videoItem" ></video>
+
     </div>
-</div>
      
 
 </section>
@@ -199,6 +200,7 @@
 
     <footer class="mkFooter">
         <a href=""><p><span>&copy;</span>&nbsp;Realizacja&nbsp;</p><p>&nbsp;MKDev</p></a>
+        
     </footer>
 
 
