@@ -151,6 +151,26 @@ function showItems(type) {
         item.style.display = isVisible ? 'block' : 'none';
     })
 
-    
 }
 
+
+
+// Website main navigation buttons
+
+// Menu buttons
+const menuGalleryBtn = document.getElementById('menuGalleryBtn');
+const menuAboutBtn = document.getElementById('menuAboutBtn');
+const menuContactBtn = document.getElementById('menuContactBtn');
+
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+
+  if (section) {
+    section.scrollIntoView({ behavior:'smooth' });
+  }
+}
+
+menuGalleryBtn.addEventListener('click', function() { scrollToSection('gallerySection') });
+menuAboutBtn.addEventListener('click', function() { scrollToSection('aboutSection') });
+menuContactBtn.addEventListener('click', function() { scrollToSection('contactSection') });

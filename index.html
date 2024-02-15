@@ -22,96 +22,67 @@
 </head>
 <body>
 
-    <section class="startScreen">
-        <video autoplay muted loop id="myVideo">
-            <source src="img/video (1080p).mp4" type="video/mp4">
-          </video>
+<section class="startScreen">
+    <video autoplay muted loop id="myVideo">
+        <source src="img/video (1080p).mp4" type="video/mp4">
+    </video>
           
     <nav class="menuBar">
-        <div class="logo"><img src="img/lucanoLogo1.svg" alt=""></div>
+        <div class="logo">
+            <img src="img/lucanoLogo1.svg" alt="">
+        </div>
 
         <ul class="menuItems">
-            <li>galeria
+            <li id="menuGalleryBtn">galeria
                 <div class="menuLine"></div>
             </li>
-            <li>o mnie
+            <li id="menuAboutBtn">o mnie
                 <div class="menuLine"></div>
             </li>
-            <li>kontakt
+            <li id="menuContactBtn">kontakt
                 <div class="menuLine"></div>
             </li>
         </ul>
     </nav>
 
-   <div class="mobileAttributeWrapper">
-    <div class="attributeBorder">
-        <div class="djAttributes">
-            <div class="attributesWrapper">
-            <div class="atrOne"><img src="img/wesela2.svg" alt=""><p><br>wesela</p></div>
-            <div class="atrTwo"><img src="img/urodziny2.svg" alt=""><p><br>urodziny</p></div>
-            <div class="atrThree"><img src="img/wydarzenia2.svg" alt=""><p><br>wydarzenia</p></div>
-            <div class="atrFour"><img src="img/imprezy2.svg" alt=""><p>imprezy<br>okolicznościowe</p></div>
-        </div>
-        </div>
-    </div>
-  </div> 
-
-    </section>
-
- 
-   
-
-
-    <section class="space"></section>
-
-    <section class="about">
-        <!-- <div class="djImage">
-            <p class="myName">Witaj, <br>Jestem Łukasz</p>
-            <img src="img/pngwing.com.png" alt="">
-            <div class="djLight"></div>
-            <div class="djLightSecond"></div>
-            <div class="lightTest"></div>
-        </div> -->
-
-
-        <!-- <div class="aboutFlexWrapper">
-        <div class="djImageWrapper">
-            <div class="djImageBorder">
-                <div class="djImage">
-                    <img src="" alt="">
-                </div>
+    <div class="mobileAttributeWrapper">
+        <div class="attributeBorder">
+            <div class="djAttributes">
+                 <div class="attributesWrapper">
+                    <div class="atrOne">
+                        <img src="img/wesela2.svg" alt="">
+                        <p><br>wesela</p>
+                    </div>
+                    <div class="atrTwo">
+                        <img src="img/urodziny2.svg" alt="">
+                        <p><br>urodziny</p>
+                    </div>
+                    <div class="atrThree">
+                        <img src="img/wydarzenia2.svg" alt="">
+                        <p><br>wydarzenia</p>
+                    </div>
+                    <div class="atrFour">
+                        <img src="img/imprezy2.svg" alt="">
+                        <p>imprezy<br>okolicznościowe</p>
+                    </div>
+                 </div>
             </div>
-        </div> -->
+        </div>
+    </div> 
+</section>
 
 
-        <!-- <div class="descriptionWrapper">
+<section id="aboutSection" class="about">
+    <img src="img/djImage.jpg" alt="" class="djImageMobile">
+    <div class="descriptionWrapper">
         <div class="descriptionBorder">
-            <div class="djDescription">
-                <p>Cześć! Jestem Dj Lucano, twój towarzysz muzyczny na niezapomnianych 
-                    imprezach! Mam za sobą długie lata doświadczenia w świecie muzyki, a moja 
-                    pasja do tworzenia niesamowitej atmosfery sprawia, że uwielbiam prowadzić różnego 
-                    rodzaju imprezy okolicznościowe. Jeśli planujesz urodziny, imprezę firmową, przyjęcie, 
-                    wesele czy studniówkę, to jestem gotów, by uczynić to wydarzenie wyjątkowym.
-                    <br>
-                    <br>
-                    Zawsze stawiam na profesjonalizm i dopasowuję się do gustów i preferencji moich klientów. 
-                    Dzięki mojej szerokiej wiedzy muzycznej mam w swojej kolekcji prawdziwe perełki - od klubowych hitów po romantyczne 
-                    ballady i najnowsze przeboje. Gwarantuję, że zawsze znajdę coś specjalnego, co sprawi, że goście będą bawić się do rana.
-                </p>
-            </div>
-        </div>
-        </div> -->
-
-        <img src="img/djImage.jpg" alt="" class="djImageMobile">
-        <div class="descriptionWrapper">
-            <div class="descriptionBorder">
-              <div class="descriptionInside">
+            <div class="descriptionInside">
                 <div class="djImage">
-                   <img src="img/djImage.jpg" alt="">
+                     <img src="img/djImage.jpg" alt="">
                 </div>
 
                 <div class="djDescription">
-                    <p>
+                     <p>
                         Cześć! Jestem Dj Lucano, twój towarzysz muzyczny na niezapomnianych 
                         imprezach! Mam za sobą długie lata doświadczenia w świecie muzyki, a moja 
                         pasja do tworzenia niesamowitej atmosfery sprawia, że uwielbiam prowadzić różnego 
@@ -122,91 +93,84 @@
                         Zawsze stawiam na profesjonalizm i dopasowuję się do gustów i preferencji moich klientów. 
                         Dzięki mojej szerokiej wiedzy muzycznej mam w swojej kolekcji prawdziwe perełki - od klubowych hitów po romantyczne 
                         ballady i najnowsze przeboje. Gwarantuję, że zawsze znajdę coś specjalnego, co sprawi, że goście będą bawić się do rana.
-                    </p>
+                     </p>
                 </div>
-              </div>
             </div>
         </div>
-    <!-- </div> -->
-    </section>
+    </div>    
+</section>
 
-    <section class="gallery">
-        <h1>galeria</h1>
+<section id="gallerySection" class="gallery">
+    <h1>galeria</h1>
         <div class="filterWrapper">
-        <div class="filterPick">
-            <ul id="pickButtons">
-                <li><img src="img/filterIcon.svg" alt=""></li>
-                <li id="showAll"  class="selectButton filterSelected" data-btnType="all">Wszystko</li>
-                <li id="showPhotos" class="selectButton" data-btnType="photoItem">Zdjęcia</li>
-                <li id="showVideos" class="selectButton" data-btnType="videoItem">Filmy</li>
-            </ul>
+            <div class="filterPick">
+                <ul id="pickButtons">
+                    <li>
+                       <img src="img/filterIcon.svg" alt="">
+                    </li>
+                    <li id="showAll"  class="selectButton filterSelected" data-btnType="all">Wszystko</li>
+                    <li id="showPhotos" class="selectButton" data-btnType="photoItem">Zdjęcia</li>
+                    <li id="showVideos" class="selectButton" data-btnType="videoItem">Filmy</li>
+                </ul>
+            </div>
         </div>
-    </div>
 
     <div class="galleryWraper">
-    <div id="gallery" class="mainGallery">
-
-        <video src="img/video (1080p).mp4" autoplay muted loop class="videoItem"></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-        <video src="img/video (1080p).mp4" class="photoItem" ></video>
-        <video src="img/video (1080p).mp4" class="videoItem" ></video>
-
+        <div id="gallery" class="mainGallery">
+            <video src="img/video (1080p).mp4" autoplay muted loop class="videoItem"></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+            <video src="img/video (1080p).mp4" class="photoItem" ></video>
+            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+        </div>
     </div>
-     
-
 </section>
 
 
 
-    <section class="contact">
-        <h1>kontakt</h1>
+<section id="contactSection" class="contact">
+    <h1>kontakt</h1>
         <p class="phoneNumber"><i class="fa-solid fa-phone"></i>722 021 562</p>
         <p class="email"><i class="fa-solid fa-envelope"></i>djlucano@gmail.com</p>
         <p class="facebook"><i class="fa-brands fa-square-facebook"></i>faceboook.com/djlucano</p>
 
-        <h2>Lub napisz tutaj</h2>
+    <h2>Lub napisz tutaj</h2>
         <input type="text" placeholder="Podaj imię" class="userNameInput smallInput">
         <input type="text" placeholder="Podaj email" class="userEmailInput smallInput">
         <input type="text" placeholder="Podaj temat" class="subjectInput smallInput">
         <textarea name="" id="" cols="30" rows="10" placeholder="Napisz wiadomość..." class="textMessage"></textarea>
         <button class="sendMessage">Wyślij</button>
         <p class="formValidationLabel"></p>
-
-    </section>
-
+</section>
 
 
-    <footer class="mkFooter">
-        <a href=""><p><span>&copy;</span>&nbsp;Realizacja&nbsp;</p><p>&nbsp;MKDev</p></a>
-        
-    </footer>
+<footer class="mkFooter">
+    <a href=""><p><span>&copy;</span>&nbsp;Realizacja&nbsp;</p><p>&nbsp;MKDev</p></a>
+</footer>
 
 
 
-
-
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

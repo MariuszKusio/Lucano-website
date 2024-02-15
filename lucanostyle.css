@@ -411,88 +411,6 @@ body {
 /* ABOUT */
 
 
-/* .djLight {
-    z-index: -1;
-    position: absolute;
-    bottom:calc(-20vh - 760px);
-    left:70%;
-    height: 850px;
-    background: linear-gradient(0deg, #b444b8, #c263c500);
-    opacity: 0.5;
-    transform-origin: bottom center;
-    transform: rotate(0deg);
-    animation: lightMove 12s cubic-bezier(.8, .4, .4, .8) infinite both;
-    box-shadow:
-    0 0 60px 30px #fff,
-    0 0 140px 60px #f0f,
-    0 0 140px 90px #0ff;
-}
-
-.djLightSecond {
-    z-index: -1;
-    position: absolute;
-    bottom:calc(-20vh - 760px);
-    left:70%;
-    height: 850px;
-    background: linear-gradient(0deg, #b444b8, #c263c500);
-    opacity: 0.5;
-    transform-origin: bottom center;
-    transform: rotate(0deg);
-    animation: lightMoveSecond 12s cubic-bezier(.8, .4, .4, .8) infinite both;
-    box-shadow:
-    0 0 60px 30px #fff,
-    0 0 140px 60px rgb(52, 125, 219),
-    0 0 140px 90px #0ff;
-} */
-
-/* 
-.myName {
-    position: absolute;
-    top: calc(120vh + 180px);
-    left: 15vw;
-    font-size: 11rem;
-    font-family: 'Parisienne', cursive;
-    font-weight: 300;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    
-} */
-
-/* .aboutFlexWrapper {
- height: 100vh;
- margin-top: 200px;
- display: flex;
- 
-} */
-
-/* .djImageWrapper {
-    width: 30wv;
-    height: 556px;
-    overflow: hidden;
-    align-self: flex-start; */
-    /* flex-shrink: 3; */
-/* } */
-
-/* .djImageBorder {
-    width: 30vw;
-    height: 556px;
-    margin-left: 80px;
-    background: linear-gradient(-45deg, #BF953F, #d4a848, #B38728, #BF953F);
-    border-radius: 50px;
-    padding: 3px; 
-    background-size: 400% 400%;
-    animation: gradientMove 4s ease infinite;
-} */
-
-/* .about .djImage {
-    width: 30vw;
-    height: 556px;
-    border-radius: 48px;
-    background-color: rgb(4,9,17);
-}
- */
-
-
-
  .djImageMobile {
     display: none;
  }
@@ -689,8 +607,6 @@ body {
     }
 }
 
-
-
 /* GALLERY */
 
 .gallery h1 {
@@ -731,10 +647,6 @@ body {
 .filterPick li.filterSelected {
     border-bottom: 1px solid white;
 }
-
-/* .filterPick li:nth-child(n+2):hover {
-    border-bottom: 1px solid white;
-} */
 
 .galleryWraper {
     max-width: 1280px;
@@ -782,67 +694,6 @@ body {
 } 
 
 
-/* .galleryWraper::-webkit-scrollbar-button { 
-    display: none; 
-}  */
-
-
-/* .mainGallery .galleryItem1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-.galleryItem5 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.galleryItem9 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-.galleryItem11 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-.galleryItem13 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-.galleryItem17 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-.galleryItem21 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 7;
-    grid-row-end: 8;
-}
-.galleryItem23 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 9;
-}
-.galleryItem25 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 9;
-    grid-row-end: 10;
-} */
-
-
 /* Responsive gallery */
 
 @media (max-width: 1400px) {
@@ -862,6 +713,7 @@ body {
 }
 
 /* Gallery grid */
+
 @media (max-width: 1000px) {
    
     .mainGallery {
@@ -907,10 +759,6 @@ body {
         font-size: 3.3rem;
     }
 }
-
-
-
-
 
 
 /* Contact */
@@ -1138,9 +986,6 @@ body {
 }
 
 
-
-
-
 /* Footer */
 
 .mkFooter {
@@ -1204,10 +1049,7 @@ body {
 }
 
 
-
-
 /* Animations */
-
 
 
 @keyframes gradientMove {
@@ -1222,28 +1064,4 @@ body {
 	}
 }
 
-
-@keyframes lightMove {
-    0% {
-       transform: rotate(50deg);
-    }
-    50%{
-       transform: rotate(-50deg);
-    }
-    100%{
-     transform: rotate(50deg);
-    }
- }
- 
- @keyframes lightMoveSecond {
-     0% {
-        transform: rotate(-50deg);
-     }
-     50%{
-        transform: rotate(50deg);
-     }
-     100%{
-      transform: rotate(-50deg);
-     }
-  }
  
