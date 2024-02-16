@@ -695,10 +695,11 @@ body {
     font-size: 3.5rem;
     color: white;
     cursor: pointer;
+    transition: .3s;
 
 }
 
-.videoItem i:hover {
+.videoItem img:hover ~ i {
     opacity: .5;
 }
 /* Scrollbar gallery style */

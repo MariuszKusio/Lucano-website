@@ -112,21 +112,22 @@ path {
 .dimbox-btn-prev,
 .dimbox-btn-next {
   top: 50%;
-  cursor: pointer;
 }
 .dimbox-btn-prev {
   left: 11px;
   transform: rotate(180deg) translateY(50%);
-  cursor: pointer;
 }
+
 .dimbox-btn-next {
   right: 11px;
   transform: translateY(-50%);
   cursor: pointer;
 }
+
 [class^="dimbox-btn"] svg {
   width: 32px;
   height: 32px;
+  cursor: pointer;
 }
 .dimbox-sequence {
   position: absolute;
@@ -208,10 +209,12 @@ path {
 }
 .dimbox-caption {
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   text-align: center;
+  text-transform: uppercase;
   margin: 8px auto 0 auto;
   cursor: default;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .dimbox-container.dimbox-light .dimbox-caption {
   color: #000;

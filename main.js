@@ -149,6 +149,16 @@ function showItems(type) {
     items.forEach(item => {
         const isVisible = type === 'all' || item.classList.contains(type);
         item.style.display = isVisible ? 'block' : 'none';
+       
+        // Conditional statement for filter item in lightbox. When element in DOM don't have data-dimbox = 'lucano-Gallery' it will not be shown in lightbox preview
+        if( type == 'all' && item.dataset.dimbox !== 'lucano-Gallery' ){
+            item.dataset.dimbox = 'lucano-Gallery';
+        } else if ( type == 'photoItem' && item.classList.contains('videoItem') ){
+            item.dataset.dimbox = '';
+        } else if ( type == 'videoItem' && item.classList.contains('photoItem') ){
+            item.dataset.dimbox = '';
+        }
+        
     })
 
 }
