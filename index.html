@@ -1,201 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Sharing -->
-    <meta name="og:description" content="Witaj, zapraszam do sprawdzenia moich realizacji oraz kontaktu." />
-    <meta property="og:title"   content="DJ Lucano - imprezy, wesela, studniówki" />
-    <meta property="og:type"    content="article" />
+    <meta
+      name="og:description"
+      content="Witaj, zapraszam do sprawdzenia moich realizacji oraz kontaktu."
+    />
+    <meta
+      property="og:title"
+      content="DJ Lucano - imprezy, wesela, studniówki"
+    />
+    <meta property="og:type" content="article" />
 
-    <meta property="og:url"  content="wklej tu url strony jak już będzie" />
-    <meta property="og:image"  content="wklej tu zdjecie" />
-    <meta name="author" content="MKDev">
+    <meta property="og:url" content="wklej tu url strony jak już będzie" />
+    <meta property="og:image" content="wklej tu zdjecie" />
+    <meta name="author" content="MKDev" />
 
     <!-- link for shortcut icon browser tab and link to css style file -->
-    <link rel="shortcut icon" type="x-icon" href="img/lucanoicon.svg">
-    <link rel="stylesheet" href="lucanostyle.css">
+    <link rel="shortcut icon" type="x-icon" href="img/lucanoicon.svg" />
+    <link rel="stylesheet" href="lucanostyle.css" />
+    <link rel="stylesheet" href="dimbox.min.css" />
 
     <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
     <!-- Font import -->
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
     <title>DJ-Lucano</title>
 
     <!-- Email messages script -->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <section class="startScreen">
+      <video autoplay muted loop id="myVideo">
+        <source src="img/video (1080p).mp4" type="video/mp4" />
+      </video>
 
-</head>
-<body>
-
-<section class="startScreen">
-    <video autoplay muted loop id="myVideo">
-        <source src="img/video (1080p).mp4" type="video/mp4">
-    </video>
-          
-    <nav class="menuBar">
+      <nav class="menuBar">
         <div class="logo">
-            <img src="img/lucanoLogo1.svg" alt="dj lucano logo">
+          <img src="img/lucanoLogo1.svg" alt="dj lucano logo" />
         </div>
 
         <ul class="menuItems">
-            <li id="menuGalleryBtn">galeria
-                <div class="menuLine"></div>
-            </li>
-            <li id="menuAboutBtn">o mnie
-                <div class="menuLine"></div>
-            </li>
-            <li id="menuContactBtn">kontakt
-                <div class="menuLine"></div>
-            </li>
+          <li id="menuGalleryBtn">
+            galeria
+            <div class="menuLine"></div>
+          </li>
+          <li id="menuAboutBtn">
+            o mnie
+            <div class="menuLine"></div>
+          </li>
+          <li id="menuContactBtn">
+            kontakt
+            <div class="menuLine"></div>
+          </li>
         </ul>
-    </nav>
+      </nav>
 
-    <div class="mobileAttributeWrapper">
+      <div class="mobileAttributeWrapper">
         <div class="attributeBorder">
-            <div class="djAttributes">
-                 <div class="attributesWrapper">
-                    <div class="atrOne">
-                        <img src="img/wesela2.svg" alt="weddings icon">
-                        <p><br>wesela</p>
-                    </div>
-                    <div class="atrTwo">
-                        <img src="img/urodziny2.svg" alt="birthday party icon">
-                        <p><br>urodziny</p>
-                    </div>
-                    <div class="atrThree">
-                        <img src="img/wydarzenia2.svg" alt="event icon">
-                        <p><br>wydarzenia</p>
-                    </div>
-                    <div class="atrFour">
-                        <img src="img/imprezy2.svg" alt="party icon">
-                        <p>imprezy<br>okolicznościowe</p>
-                    </div>
-                 </div>
+          <div class="djAttributes">
+            <div class="attributesWrapper">
+              <div class="atrOne">
+                <img src="img/wesela2.svg" alt="weddings icon" />
+                <p><br />wesela</p>
+              </div>
+              <div class="atrTwo">
+                <img src="img/urodziny2.svg" alt="birthday party icon" />
+                <p><br />urodziny</p>
+              </div>
+              <div class="atrThree">
+                <img src="img/wydarzenia2.svg" alt="event icon" />
+                <p><br />wydarzenia</p>
+              </div>
+              <div class="atrFour">
+                <img src="img/imprezy2.svg" alt="party icon" />
+                <p>imprezy<br />okolicznościowe</p>
+              </div>
             </div>
+          </div>
         </div>
-    </div> 
-</section>
+      </div>
+    </section>
 
-
-<section id="aboutSection" class="about">
-    <img src="img/djImage.jpg" alt="photo of dj lucano for mobile devices" class="djImageMobile">
-    <div class="descriptionWrapper">
+    <section id="aboutSection" class="about">
+      <img
+        src="img/djImage.jpg"
+        alt="photo of dj lucano for mobile devices"
+        class="djImageMobile"
+      />
+      <div class="descriptionWrapper">
         <div class="descriptionBorder">
-            <div class="descriptionInside">
-                <div class="djImage">
-                     <img src="img/djImage.jpg" alt="photo of dj lucano for desktop">
-                </div>
-
-                <div class="djDescription">
-                     <p>
-                        Cześć! Jestem Dj Lucano, twój towarzysz muzyczny na niezapomnianych 
-                        imprezach! Mam za sobą długie lata doświadczenia w świecie muzyki, a moja 
-                        pasja do tworzenia niesamowitej atmosfery sprawia, że uwielbiam prowadzić różnego 
-                        rodzaju imprezy okolicznościowe. Jeśli planujesz urodziny, imprezę firmową, przyjęcie, 
-                        wesele czy studniówkę, to jestem gotów, by uczynić to wydarzenie wyjątkowym.
-                        <br>
-                        <br>
-                        Zawsze stawiam na profesjonalizm i dopasowuję się do gustów i preferencji moich klientów. 
-                        Dzięki mojej szerokiej wiedzy muzycznej mam w swojej kolekcji prawdziwe perełki - od klubowych hitów po romantyczne 
-                        ballady i najnowsze przeboje. Gwarantuję, że zawsze znajdę coś specjalnego, co sprawi, że goście będą bawić się do rana.
-                     </p>
-                </div>
+          <div class="descriptionInside">
+            <div class="djImage">
+              <img src="img/djImage.jpg" alt="photo of dj lucano for desktop" />
             </div>
-        </div>
-    </div>    
-</section>
 
-<section id="gallerySection" class="gallery">
-    <h1>galeria</h1>
-        <div class="filterWrapper">
-            <div class="filterPick">
-                <ul id="pickButtons">
-                    <li>
-                       <img src="img/filterIcon.svg" alt="gallery filter icon">
-                    </li>
-                    <li id="showAll"  class="selectButton filterSelected" data-btnType="all">Wszystko</li>
-                    <li id="showPhotos" class="selectButton" data-btnType="photoItem">Zdjęcia</li>
-                    <li id="showVideos" class="selectButton" data-btnType="videoItem">Filmy</li>
-                </ul>
+            <div class="djDescription">
+              <p>
+                Cześć! Jestem Dj Lucano, twój towarzysz muzyczny na
+                niezapomnianych imprezach! Mam za sobą długie lata doświadczenia
+                w świecie muzyki, a moja pasja do tworzenia niesamowitej
+                atmosfery sprawia, że uwielbiam prowadzić różnego rodzaju
+                imprezy okolicznościowe. Jeśli planujesz urodziny, imprezę
+                firmową, przyjęcie, wesele czy studniówkę, to jestem gotów, by
+                uczynić to wydarzenie wyjątkowym.
+                <br />
+                <br />
+                Zawsze stawiam na profesjonalizm i dopasowuję się do gustów i
+                preferencji moich klientów. Dzięki mojej szerokiej wiedzy
+                muzycznej mam w swojej kolekcji prawdziwe perełki - od klubowych
+                hitów po romantyczne ballady i najnowsze przeboje. Gwarantuję,
+                że zawsze znajdę coś specjalnego, co sprawi, że goście będą
+                bawić się do rana.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    <div class="galleryWraper">
+    <section id="gallerySection" class="gallery">
+      <h1>galeria</h1>
+      <div class="filterWrapper">
+        <div class="filterPick">
+          <ul id="pickButtons">
+            <li>
+              <img src="img/filterIcon.svg" alt="gallery filter icon" />
+            </li>
+            <li
+              id="showAll"
+              class="selectButton filterSelected"
+              data-btnType="all"
+            >
+              Wszystko
+            </li>
+            <li id="showPhotos" class="selectButton" data-btnType="photoItem">
+              Zdjęcia
+            </li>
+            <li id="showVideos" class="selectButton" data-btnType="videoItem">
+              Filmy
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="galleryWraper">
         <div id="gallery" class="mainGallery">
-            <video src="img/video (1080p).mp4" autoplay muted loop class="videoItem"></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <img src="img/djImage.jpg" alt="" class="photoItem">
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
-            <video src="img/video (1080p).mp4" class="photoItem" ></video>
-            <video src="img/video (1080p).mp4" class="videoItem" ></video>
+
+          <!-- Gallery item 1 (video) -->
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i><!-- DODAJ TUTAJ IKONKE PLAY DO TYCH ELEMENTÓW KTÓRE MAJĄ VIDEO  -->
+          </a>
+
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i><!-- DODAJ TUTAJ IKONKE PLAY DO TYCH ELEMENTÓW KTÓRE MAJĄ VIDEO  -->
+          </a>
+
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i><!-- DODAJ TUTAJ IKONKE PLAY DO TYCH ELEMENTÓW KTÓRE MAJĄ VIDEO  -->
+          </a>
+          <!-- Gallery item 2 (image) -->
+          <a href="img/djImage.jpg" data-dimbox="my-image" data-dimbox-caption="Image Description" class="photoItem">
+            <img src="img/djImage.jpg" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/djImage.jpg" data-dimbox="my-image" data-dimbox-caption="Image Description" class="photoItem">
+            <img src="img/djImage.jpg" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/djImage.jpg" data-dimbox="my-image" data-dimbox-caption="Image Description" class="photoItem">
+            <img src="img/djImage.jpg" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/djImage.jpg" data-dimbox="my-image" data-dimbox-caption="Image Description" class="photoItem">
+            <img src="img/djImage.jpg" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/djImage.jpg" data-dimbox="my-image" data-dimbox-caption="Image Description" class="photoItem">
+            <img src="img/djImage.jpg" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          
+          <a href="img/djImage.jpg" data-dimbox="my-image" data-dimbox-caption="Image Description" class="photoItem">
+            <img src="img/djImage.jpg" alt="" class="photoItem" />
+          </a>
+
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+          <a href="img/video (1080p).mp4" data-dimbox="my-image" class="videoItem">
+            <img src="img/djImage.jpg" alt="" /> 
+            <i class="fa-solid fa-play"></i>
+          </a>
+
+
+          
+         
+
+        
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
+    <section id="contactSection" class="contact">
+      <h1>kontakt</h1>
+      <p class="phoneNumber"><i class="fa-solid fa-phone"></i>722 021 562</p>
+      <p class="email">
+        <i class="fa-solid fa-envelope"></i>djlucano@gmail.com
+      </p>
+      <p class="facebook">
+        <i class="fa-brands fa-square-facebook"></i>faceboook.com/djlucano
+      </p>
 
+      <h2>Lub napisz tutaj</h2>
+      <input
+        type="text"
+        placeholder="Podaj imię"
+        class="userNameInput smallInput"
+      />
+      <input
+        type="text"
+        placeholder="Podaj email"
+        class="userEmailInput smallInput"
+      />
+      <input
+        type="text"
+        placeholder="Podaj temat"
+        class="subjectInput smallInput"
+      />
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Napisz wiadomość..."
+        class="textMessage"
+      ></textarea>
+      <button class="sendMessage">Wyślij</button>
+      <p class="formValidationLabel"></p>
+    </section>
 
-<section id="contactSection" class="contact">
-    <h1>kontakt</h1>
-        <p class="phoneNumber"><i class="fa-solid fa-phone"></i>722 021 562</p>
-        <p class="email"><i class="fa-solid fa-envelope"></i>djlucano@gmail.com</p>
-        <p class="facebook"><i class="fa-brands fa-square-facebook"></i>faceboook.com/djlucano</p>
+    <footer class="mkFooter">
+      <a href=""
+        ><p><span>&copy;</span>&nbsp;Realizacja&nbsp;</p>
+        <p>&nbsp;MKDev</p></a
+      >
+    </footer>
 
-    <h2>Lub napisz tutaj</h2>
-        <input type="text" placeholder="Podaj imię" class="userNameInput smallInput">
-        <input type="text" placeholder="Podaj email" class="userEmailInput smallInput">
-        <input type="text" placeholder="Podaj temat" class="subjectInput smallInput">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Napisz wiadomość..." class="textMessage"></textarea>
-        <button class="sendMessage">Wyślij</button>
-        <p class="formValidationLabel"></p>
-</section>
-
-
-<footer class="mkFooter">
-    <a href=""><p><span>&copy;</span>&nbsp;Realizacja&nbsp;</p><p>&nbsp;MKDev</p></a>
-</footer>
-
-
-
-<script src="main.js"></script>
-</body>
+    <script src="dimbox.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
