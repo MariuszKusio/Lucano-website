@@ -154,9 +154,17 @@ function showItems(type) {
         if( type == 'all' && item.dataset.dimbox !== 'lucano-Gallery' ){
             item.dataset.dimbox = 'lucano-Gallery';
         } else if ( type == 'photoItem' && item.classList.contains('videoItem') ){
+            if(item.classList.contains('')){
+                item.dataset.dimbox = 'lucano-Gallery';
+            } else if(item.classList.contains('lucano-Gallery')){
             item.dataset.dimbox = '';
+            }
         } else if ( type == 'videoItem' && item.classList.contains('photoItem') ){
+            if(item.classList.contains('')){
+                item.dataset.dimbox = 'lucano-Gallery';
+            } else if(item.classList.contains('lucano-Gallery')){
             item.dataset.dimbox = '';
+            }
         }
         
     })
