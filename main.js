@@ -153,18 +153,12 @@ function showItems(type) {
         // Conditional statement for filter item in lightbox. When element in DOM don't have data-dimbox = 'lucano-Gallery' it will not be shown in lightbox preview
         if( type == 'all' && item.dataset.dimbox !== 'lucano-Gallery' ){
             item.dataset.dimbox = 'lucano-Gallery';
-        } else if ( type == 'photoItem' && item.classList.contains('videoItem') ){
-            if(item.classList.contains('')){
-                item.dataset.dimbox = 'lucano-Gallery';
-            } else if(item.classList.contains('lucano-Gallery')){
-            item.dataset.dimbox = '';
-            }
-        } else if ( type == 'videoItem' && item.classList.contains('photoItem') ){
-            if(item.classList.contains('')){
-                item.dataset.dimbox = 'lucano-Gallery';
-            } else if(item.classList.contains('lucano-Gallery')){
-            item.dataset.dimbox = '';
-            }
+        } else if ( type == 'photoItem') {
+            item.classList.contains('videoItem') ? item.dataset.dimbox = '' : item.dataset.dimbox = 'lucano-Gallery';
+            item.classList.contains('photoItem') ? item.dataset.dimbox = 'lucano-Gallery' : item.dataset.dimbox = '';
+        } else if ( type == 'videoItem'  ){
+            item.classList.contains('videoItem') ? item.dataset.dimbox = 'lucano-Gallery' : item.dataset.dimbox = '';
+            item.classList.contains('photoItem') ? item.dataset.dimbox = '' : item.dataset.dimbox = 'lucano-Gallery';
         }
         
     })
